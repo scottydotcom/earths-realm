@@ -50,3 +50,17 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredParks.push(park);
       }
     }
+    parkResultsContainer.innerHTML = "";
+    for (const park of filteredParks) {
+      parkResultsContainer.appendChild(createParkCard(park));
+    }
+  }
+
+  // Add event listeners
+  locationSelect.addEventListener("change", showParkCards);
+  parkTypeSelect.addEventListener("change", showParkCards);
+  searchInput.addEventListener("keyup", showParkCards);
+
+  // Show all park cards initially
+  showParkCards();
+});
