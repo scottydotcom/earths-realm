@@ -4,16 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <title>National Parks</title>
   </head>
   <body>
-    <main>
+    <header>
       <h1>National Parks</h1>
-    </main>
+    </header>
+    <form>
+      <label for="location">Select a Location:</label>
+      <select id="location">
+        <option>Select a Location</option>
+      </select>
+      <label for="type">Select a Type:</label>
+      <select id="type">
+        <option>Select a Type</option>
+      </select>
+      <label for="search">Search:</label>
+      <input id="search" placeholder="Enter text to search" />
+    </form>
+    <section id="results"></section>
     <script src="scripts/locationData.js"></script>
     <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
-
     <script src="scripts/national-parks.js"></script>
   </body>
 </html>
