@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     parkTypeSelect.appendChild(parkTypeOption);
   }
 
-    // Function to create a park card element
+  // Function to create a park card element
   function createParkCard(park) {
     let parkCard;
     if (park.Visit) {
@@ -27,25 +27,32 @@ document.addEventListener("DOMContentLoaded", () => {
       parkCard.href = park.Visit;
       parkCard.target = "_blank";
     } else {
-      parkCard = document.createElement("section");
+      parkCard = document.createElement("div");
     }
-     parkCard.className = "card";
+    parkCard.className = "card";
     parkCard.innerText = `${park.LocationName} ${park.Address} ${park.State}`;
-    
-     return parkCard;
+
+    return parkCard;
   }
 
-    // Function to filter and show park cards
+  // Function to filter and show park cards
   function showParkCards() {
     const selectedLocation = locationSelect.value;
     const selectedParkType = parkTypeSelect.value;
     const searchQuery = searchInput.value.toLowerCase();
-  
+
     const filteredParks = [];
     for (const park of nationalParksArray) {
-      const locationMatch = selectedLocation === "" || park.State === selectedLocation;
-      const parkTypeMatch = selectedParkType === "" || park.LocationName.toLowerCase().includes(selectedParkType.toLowerCase());
-      const searchMatch = searchQuery === "" || park.LocationName.toLowerCase().includes(searchQuery);
+      const locationMatch =
+        selectedLocation === "" || park.State === selectedLocation;
+      const parkTypeMatch =
+        selectedParkType === "" ||
+        park.LocationName.toLowerCase().includes(
+          selectedParkType.toLowerCase()
+        );
+      const searchMatch =
+        searchQuery === "" ||
+        park.LocationName.toLowerCase().includes(searchQuery);
       if (locationMatch && parkTypeMatch && searchMatch) {
         filteredParks.push(park);
       }
