@@ -23,3 +23,45 @@ function getPark(park) {
   }
   return element;
 }
+document.addEventListener("DOMContentLoaded", () => {
+  function showResults() {
+    let filtered = [];
+    if (locationRadio.checked) {
+      filtered = nationalParksArray.filter(
+        (parkOption) =>
+          parkOption.State.toUpperCase() === locations.value.toUpperCase()
+      );
+    } else {
+      filtered = nationalParksArray.filter((parkOption) =>
+        parkOption.LocationName.toUpperCase().includes(
+          parkTypes.value.toUpperCase()
+        )
+      );
+    }
+    results.innerHTML = ""; //CLEAR OUT THE OLD
+    filtered.forEach((displaPark) => results.appendChild(getPark(displaPark)));
+  }
+  locations.addEventListener("change", showResults);
+  parkTypes.addEventListener("change", showResults);
+
+  function handleSearchBy(e) {
+    if (locationRadio.checked) {
+      locationLabel.style.display = "block";
+      parkTypeLabel.style.display = "none";
+    } else {
+      locationLabel.style.display = "none";
+      parkTypeLabel.style.display = "block";
+    }
+    showResults();
+  }
+  locationRadio.addEventListener("click", handleSearchBy);
+  parkTypeRadio.addEventListener("click", handleSearchBy);
+
+  locationsArray
+    .map(option)
+    .forEach((locationCategory) => locations.appendChild(locationCategory));
+
+  parkTypesArray
+    .map(option)
+    .forEach((parkCategory) => parkTypes.appendChild(parkCategory));
+}); //end loaded
