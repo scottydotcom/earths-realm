@@ -35,3 +35,12 @@ function filter() {
   }
 }
 
+function showMountains(mountains) {
+  const results = document.getElementById("results");
+  results.innerText = "";
+
+  for (let mountain of mountains) {
+    results.appendChild(createMountainCard(mountain));
+  }
+}
+
