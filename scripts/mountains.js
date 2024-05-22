@@ -44,3 +44,21 @@ function showMountains(mountains) {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const name = document.getElementById("name");
+  const mountainSelect = [...new Set(mountainsArray.map(function(mountain) {
+    return mountain.name;
+  }))];
+
+  mountainSelect.unshift("Select a Mountain");
+
+  for (let selectedMountain of mountainSelect) {
+    const option = document.createElement("option");
+    option.value = selectedMountain;
+    option.textContent = selectedMountain;
+    name.appendChild(option);
+  }
+
+  name.addEventListener("change", filter);
+  showMountains(mountainsArray); // Show all mountains by default
+});
