@@ -1,3 +1,5 @@
+"use strict";
+
 document.addEventListener("DOMContentLoaded", () => {
   const parkResultsContainer = document.getElementById("results");
   const locationSelect = document.getElementById("location");
@@ -57,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         filteredParks.push(park);
       }
     }
-    parkResultsContainer.innerHTML = "";
+    parkResultsContainer.innerText = "";
     for (const park of filteredParks) {
       parkResultsContainer.appendChild(createParkCard(park));
     }
