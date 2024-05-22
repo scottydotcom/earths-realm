@@ -11,6 +11,27 @@
     />
     <title>National Parks</title>
   </head>
+
+  <style>
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    #scrollToTopBtn.visible {
+      opacity: 1;
+    }
+  </style>
+
   <body>
     <header>
       <h1>National Parks</h1>
@@ -29,10 +50,31 @@
         <input id="search" placeholder="Enter text to search" />
       </form>
       <div id="results"></div>
+      <button id="scrollToTopBtn" title="Go to top">Top</button>
     </main>
+
     <script src="scripts/locationData.js"></script>
     <script src="scripts/parkTypeData.js"></script>
     <script src="scripts/nationalParkData.js"></script>
     <script src="scripts/national-parks.js"></script>
+
+    <script>
+      const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+          scrollToTopBtn.classList.add("visible");
+        } else {
+          scrollToTopBtn.classList.remove("visible");
+        }
+      });
+
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
   </body>
 </html>

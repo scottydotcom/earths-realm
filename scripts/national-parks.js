@@ -1,10 +1,10 @@
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const parkResultsContainer = document.getElementById("results");
-  const locationSelect = document.getElementById("location");
-  const parkTypeSelect = document.getElementById("type");
-  const searchInput = document.getElementById("search");
+  const parkResultsContainer = document.querySelector("#results");
+  const locationSelect = document.querySelector("#location");
+  const parkTypeSelect = document.querySelector("#type");
+  const searchInput = document.querySelector("#search");
 
   // Create options for select elements
   for (const location of locationsArray) {

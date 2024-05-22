@@ -25,18 +25,20 @@ function createMountainCard(item) {
 }
 
 function filter() {
-  const selectedname = document.getElementById("name").value;
+  const selectedname = document.querySelector("#name").value;
   if (selectedname === "Select a Mountain") {
     showMountains(mountainsArray);
   } else {
-    showMountains(mountainsArray.filter(function(mountain) {
-      return mountain.name === selectedname;
-    }));
+    showMountains(
+      mountainsArray.filter(function (mountain) {
+        return mountain.name === selectedname;
+      })
+    );
   }
 }
 
 function showMountains(mountains) {
-  const results = document.getElementById("results");
+  const results = document.querySelector("#results");
   results.innerText = "";
 
   for (let mountain of mountains) {
@@ -44,11 +46,15 @@ function showMountains(mountains) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const name = document.getElementById("name");
-  const mountainSelect = [...new Set(mountainsArray.map(function(mountain) {
-    return mountain.name;
-  }))];
+document.addEventListener("DOMContentLoaded", function () {
+  const name = document.querySelector("#name");
+  const mountainSelect = [
+    ...new Set(
+      mountainsArray.map(function (mountain) {
+        return mountain.name;
+      })
+    ),
+  ];
 
   mountainSelect.unshift("Select a Mountain");
 
