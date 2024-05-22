@@ -9,7 +9,7 @@ function getPark(park) {
   element.classList.add("park");
 
   element.innerHTML = `
-        <hr>
+        
         <h3>${park.LocationName}</h3>
         <h4>${park.LocationID}</h4>
         <div>${park.State}</div>
