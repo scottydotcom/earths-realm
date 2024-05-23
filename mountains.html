@@ -4,64 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
-    />
+    <link rel="stylesheet" href="mountain.css" />
     <title>Mountains</title>
   </head>
-
-  <style>
-    #scrollToTopBtn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #333;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-    }
-
-    #scrollToTopBtn.visible {
-      opacity: 1;
-    }
-  </style>
-
   <body>
     <header>
       <h1>Mountains</h1>
     </header>
     <main>
-      <select id="name">
-        <!-- <option>Select a Mountains</option> -->
-      </select>
-      <div id="results"></div>
-      <button id="scrollToTopBtn" title="Go to top">Top</button>
+      <form>
+        <select id="name"></select>
+        <div id="results"></div>
+      </form>
+      <button id="scrollToTopBtn" title="Go to top">^</button>
     </main>
+    <footer>
+      <p>Copyright &copy; 2023 Scotty. All rights reserved.</p>
+    </footer>
     <script src="scripts/mountainData.js"></script>
     <script src="scripts/mountains.js"></script>
-
-    <script>
-      const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
-
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 100) {
-          scrollToTopBtn.classList.add("visible");
-        } else {
-          scrollToTopBtn.classList.remove("visible");
-        }
-      });
-
-      scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-    </script>
+    <script src="scroll.js"></script>
   </body>
 </html>

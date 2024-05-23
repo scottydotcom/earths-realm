@@ -37,78 +37,76 @@ input[type="radio"] {
 }
 
 .radio-group {
-    display: flex;
-    gap: 10px; /* Adjust the gap between radio buttons */
-  }
-  
-  .radio-group label {
-    display: flex;
-    align-items: center;
-  }
-  
-  .radio-group input[type="radio"] {
-    margin-right: 5px;
-  }
+  display: flex;
+  gap: 10px; /* Adjust the gap between radio buttons */
+}
 
-  /* Hide the default radio button */
+.radio-group label {
+  display: flex;
+  align-items: center;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Hide the default radio button */
 input[type="radio"] {
-    appearance: none;
+  appearance: none;
+}
+
+/* Create custom radio button */
+input[type="radio"]::before {
+  content: "";
+  display: inline-block;
+  width: 16px; /* Adjust size as needed */
+  height: 16px; /* Adjust size as needed */
+  border-radius: 50%;
+  border: 2px solid #88976d; /* Color for outer circle */
+  background-color: transparent;
+  margin-right: 5px; /* Adjust spacing between radio button and label */
+  transition: border-color 0.3s ease; /* Animation for border color */
+}
+
+/* Style radio button when checked */
+input[type="radio"]:checked::before {
+  background-color: #88976d; /* Color for inner circle when checked */
+}
+
+/* Style radio button when hovered */
+input[type="radio"]:hover::before {
+  border-color: white; /* Color for outer circle on hover */
+}
+
+/* Hide default radio button label */
+input[type="radio"] + label {
+  display: none;
+}
+
+/* Show custom radio button label */
+input[type="radio"] + label::before {
+  content: attr(data-label);
+  font-size: 16px; /* Adjust font size as needed */
+  color: #deb887; /* Color for radio button label */
+  cursor: pointer;
+}
+
+/* Animation when radio button is clicked */
+input[type="radio"]:checked::before {
+  animation: clickAnimation 0.3s ease;
+}
+
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
   }
-  
-  /* Create custom radio button */
-  input[type="radio"]::before {
-    content: '';
-    display: inline-block;
-    width: 16px; /* Adjust size as needed */
-    height: 16px; /* Adjust size as needed */
-    border-radius: 50%;
-    border: 2px solid #88976d; /* Color for outer circle */
-    background-color: transparent;
-    margin-right: 5px; /* Adjust spacing between radio button and label */
-    transition: border-color 0.3s ease; /* Animation for border color */
+  50% {
+    transform: scale(1.2);
   }
-  
-  /* Style radio button when checked */
-  input[type="radio"]:checked::before {
-    background-color: #88976d; /* Color for inner circle when checked */
+  100% {
+    transform: scale(1);
   }
-  
-  /* Style radio button when hovered */
-  input[type="radio"]:hover::before {
-    border-color: white; /* Color for outer circle on hover */
-  }
-  
-  /* Hide default radio button label */
-  input[type="radio"] + label {
-    display: none;
-  }
-  
-  /* Show custom radio button label */
-  input[type="radio"] + label::before {
-    content: attr(data-label);
-    font-size: 16px; /* Adjust font size as needed */
-    color: #deb887; /* Color for radio button label */
-    cursor: pointer;
-  }
-  
-  /* Animation when radio button is clicked */
-  input[type="radio"]:checked::before {
-    animation: clickAnimation 0.3s ease;
-  }
-  
-  @keyframes clickAnimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  
-  
+}
 
 label {
   display: inline-block;

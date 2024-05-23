@@ -1,7 +1,7 @@
 const scrollToTopBtn = document.querySelector("#scrollToTopBtn");
 
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
+  if (window.scrollY > 500) {
     scrollToTopBtn.classList.add("visible");
   } else {
     scrollToTopBtn.classList.remove("visible");
