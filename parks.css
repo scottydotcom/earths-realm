@@ -40,6 +40,48 @@ header {
   text-decoration: none;
 }
 
+#homeBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#homeBtn:hover {
+  background: #88976d;
+}
+
+#parkBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#parkBtn:hover {
+  background: #88976d;
+}
+
+#mountainBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#mountainBtn:hover {
+  background: #88976d;
+}
+
 form {
   display: flex;
   flex-wrap: wrap;
