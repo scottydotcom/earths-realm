@@ -18,6 +18,26 @@ header {
   background-color: #141419;
   padding: 1rem;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links a {
+  color: #deb887;/* Replace with your desired color */
+  text-decoration: none;
 }
 
 form {
