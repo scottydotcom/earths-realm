@@ -24,7 +24,6 @@ header {
 }
 
 .nav-links {
-  
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -36,7 +35,7 @@ header {
 }
 
 .nav-links a {
-  color: #deb887;/* Replace with your desired color */
+  color: #deb887; /* Replace with your desired color */
   text-decoration: none;
 }
 
