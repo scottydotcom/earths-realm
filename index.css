@@ -1,0 +1,52 @@
+body {
+  background-color: #1c1d24;
+  color: #deb887;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  /* margin-bottom: 60px; */
+  background-image: url('assets/parkBG.jpg');
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: #141419;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links a {
+  color: #deb887; /* Replace with your desired color */
+  text-decoration: none;
+}
+
+footer {
+  position: sticky;
+  position: 0;
+  background-color: #141419;
+  color: #deb887;
+  padding: 1rem;
+  text-align: center;
+}
