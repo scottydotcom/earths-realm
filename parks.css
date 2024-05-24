@@ -81,6 +81,21 @@ header {
   background: #88976d;
 }
 
+#timeBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#timeBtn:hover {
+  background: #88976d;
+}
+
+
 form {
   display: flex;
   flex-wrap: wrap;
