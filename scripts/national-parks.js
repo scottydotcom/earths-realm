@@ -28,7 +28,6 @@ function getPark(park) {
   return element;
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
   function showResults() {
     let filtered = [];
@@ -54,9 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (locationRadio.checked) {
       locationLabel.style.display = "block";
       parkTypeLabel.style.display = "none";
-    } else {
+    } else if (parkTypeRadio.checked) {
       locationLabel.style.display = "none";
       parkTypeLabel.style.display = "block";
+    } else if (viewAllRadio.checked) {
+      locationLabel.style.display = "none";
+      parkTypeLabel.style.display = "none";
     }
     showResults();
   }
@@ -70,4 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
   parkTypesArray
     .map(option)
     .forEach((parkCategory) => parkTypes.appendChild(parkCategory));
-}); 
+
+  viewAllRadio.addEventListener("click", handleSearchBy);
+});
