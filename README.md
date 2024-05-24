@@ -15,3 +15,7 @@ Users can search for parks, recreational areas and much more across the entire U
 - CSS
 - JavaScript
 
+# 🎋 Future Plans 🎋
+- Expand on sunset/sunrise API
+- Create more information links for indepth research
+- Add a page for waterfalls and wild life
