@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="time.css" />
+    <title>Time</title>
+  </head>
+  <body>
+    <header>
+      <h1>Sun Time</h1>
+      <a class="navbar-brand" href="index.html"
+        ><img src="/assets/logo.png" alt="" width="80"
+      /></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a id="homeBtn" href="../index.html">Home</a></li>
+          <li><a id="parkBtn" href="../national-parks.html">National Parks</a></li>
+          <li><a id="mountainBtn" href="../mountains.html">Mountains</a></li>
+          <li><a id="timeBtn" href="time.html">Views</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>Sunrise and Sunset Times for NYC</h1>
+        <div class="time-row">
+          <div class="block">
+            <div class="label">Sunrise</div>
+            <div class="data">
+              <strong><span id="sunrise"></span></strong>
+            </div>
+          </div>
+          <div class="block">
+            <div class="label">Sunset</div>
+            <div class="data">
+              <strong><span id="sunset"></span></strong>
+            </div>
+          </div>
+        </div>
+        <div class="block">
+          <div class="label">Raw data from API response</div>
+          <div class="data"><code id="raw-output"></code></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2023 Scotty. All rights reserved.</p>
+    </footer>
+    <script src="time.js"></script>
+  </body>
+</html>

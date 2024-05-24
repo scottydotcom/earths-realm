@@ -1,0 +1,142 @@
+body {
+  background-color: #1c1d24;
+  color: #deb887;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  flex: 1;
+  background-image: url("assets/parkBG.jpg");
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: #141419;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 0.5rem;
+}
+
+.nav-links a {
+  color: #deb887;
+  text-decoration: none;
+}
+
+#homeBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#homeBtn:hover {
+  background: #88976d;
+}
+
+#parkBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#parkBtn:hover {
+  background: #88976d;
+}
+
+#mountainBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#mountainBtn:hover {
+  background: #88976d;
+}
+
+#timeBtn {
+  font-size: 1em;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#timeBtn:hover {
+  background: #88976d;
+}
+
+footer {
+  position: sticky;
+  position: 0;
+  background-color: #141419;
+  color: #deb887;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+  text-align: center;
+  max-width: 580px;
+  margin: 1em auto;
+  margin-top: 20px;
+  text-align: center;
+  max-width: 580px;
+}
+.time-row {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1em;
+}
+.block .label {
+  color: #a1a1aa;
+  font-size: 0.9em;
+  margin-bottom: 0.4em;
+}
+.block .data {
+  font-size: 1.3em;
+}
+.block {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #deb887;
+  text-align: left;
+  padding: 1.2em;
+  display: block;
+  overflow-wrap: break-word;
+  border: 1px solid #27272a;
+  border-radius: 1em;
+}
