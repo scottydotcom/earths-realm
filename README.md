@@ -3,7 +3,7 @@ A info site created to help the public become knowledge on national parks and mo
 
 Users can search for parks, recreational areas and much more across the entire United States.
 
-[Live Link]()
+[Live Link](https://earthsrealm.netlify.app/)
 
 <img src="assets/home.png">
 <img src="assets/parks.png">
