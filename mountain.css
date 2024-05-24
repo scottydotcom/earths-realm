@@ -179,14 +179,36 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* Desktop screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* Tablet screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
   .park {
     width: calc(50% - 2rem);
   }
 }
 
-@media (max-width: 480px) {
+/* Small tablet screens (600px to 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+}
+
+/* Mobile screens (480px to 599px) */
+@media (min-width: 480px) and (max-width: 599px) {
   .park {
     width: 100%;
   }
+}
+
+/* Small mobile screens (320px to 479px) */
+@media (min-width: 320px) and (max-width: 479px) {
+}
+
+/* Extra small mobile screens (below 320px) */
+@media (max-width: 319px) {
 }
