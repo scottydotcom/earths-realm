@@ -1,1 +1,17 @@
-#enjoy the outdoors
+# 🌲 Experience Earth 🌲
+A info site created to help the public become knowledge on national parks and mountains in their state.
+
+Users can search for parks, recreational areas and much more across the entire United States.
+
+[Live Link]()
+
+<img src="assets/home.png">
+<img src="assets/parks.png">
+<img src="assets/mountains.png">
+<img src="assets/sunset.png">
+
+# 💻 Technologies used 💻
+- HTML
+- CSS
+- JavaScript
+
