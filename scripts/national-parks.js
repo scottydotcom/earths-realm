@@ -9,10 +9,13 @@ function getPark(park) {
   element.classList.add("park");
 
   element.innerHTML = `
-        
         <h3>${park.LocationName}</h3>
         <h4>${park.Address} ${park.City}</h4>
-        <h4>${park.ZipCode} ${park.Phone}</h4>
+        <h4>${park.ZipCode}`;
+  if (park.Phone !== 0) {
+    element.innerHTML += ` ${park.Phone}`;
+  }
+  element.innerHTML += `</h4>
         <div>${park.State}</div>
     `;
   if (park.hasOwnProperty("Visit")) {
@@ -24,6 +27,8 @@ function getPark(park) {
   }
   return element;
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
   function showResults() {
     let filtered = [];
@@ -65,4 +70,4 @@ document.addEventListener("DOMContentLoaded", () => {
   parkTypesArray
     .map(option)
     .forEach((parkCategory) => parkTypes.appendChild(parkCategory));
-}); //end loaded
+}); 
