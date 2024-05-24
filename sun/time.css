@@ -1,4 +1,6 @@
 body {
+  background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png")
+  center center/cover no-repeat transparent;
   background-color: #1c1d24;
   color: #deb887;
   font-family: Arial, sans-serif;
