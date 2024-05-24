@@ -35,7 +35,7 @@ header {
 }
 
 .nav-links a {
-  color: #deb887; /* Replace with your desired color */
+  color: #deb887; 
   text-decoration: none;
 }
 
@@ -106,6 +106,7 @@ select:focus {
   outline: none;
   box-shadow: 0 0 3px 1px #deb887;
 }
+
 
 #results {
   display: flex;

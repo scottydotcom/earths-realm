@@ -11,39 +11,29 @@ body {
 
 main {
   flex: 1;
-  /* margin-bottom: 60px; */
   background-image: url("assets/parkBG.jpg");
   background-repeat: no-repeat;
 }
 
 .hero-text {
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-
-  /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   position: relative;
-
   border: solid white;
   background-color: rgba(0, 0, 0, 0.3);
-
   position: absolute;
   color: white;
   text-align: center;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
-
   border: solid white;
   padding: 20px 60px;
   background-color: rgba(0, 0, 0, 0.5);
-
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
 }
@@ -78,7 +68,7 @@ header {
 }
 
 .nav-links a {
-  color: #deb887; /* Replace with your desired color */
+  color: #deb887; 
   text-decoration: none;
 }
 

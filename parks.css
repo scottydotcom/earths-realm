@@ -11,7 +11,7 @@ body {
 
 main {
   flex: 1;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 header {
@@ -35,7 +35,7 @@ header {
 }
 
 .nav-links a {
-  color: #deb887; /* Replace with your desired color */
+  color: #deb887;
   text-decoration: none;
 }
 
@@ -99,7 +99,7 @@ input[type="radio"] {
 
 .radio-group {
   display: flex;
-  gap: 10px; /* Adjust the gap between radio buttons */
+  gap: 10px;
 }
 
 .radio-group label {
@@ -111,48 +111,41 @@ input[type="radio"] {
   margin-right: 5px;
 }
 
-/* Hide the default radio button */
 input[type="radio"] {
   appearance: none;
 }
 
-/* Create custom radio button */
 input[type="radio"]::before {
   content: "";
   display: inline-block;
-  width: 16px; /* Adjust size as needed */
-  height: 16px; /* Adjust size as needed */
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 2px solid #88976d; /* Color for outer circle */
+  border: 2px solid #88976d;
   background-color: transparent;
-  margin-right: 5px; /* Adjust spacing between radio button and label */
-  transition: border-color 0.3s ease; /* Animation for border color */
+  margin-right: 5px;
+  transition: border-color 0.3s ease;
 }
 
-/* Style radio button when checked */
 input[type="radio"]:checked::before {
-  background-color: #88976d; /* Color for inner circle when checked */
+  background-color: #88976d;
 }
 
-/* Style radio button when hovered */
 input[type="radio"]:hover::before {
-  border-color: white; /* Color for outer circle on hover */
+  border-color: white;
 }
 
-/* Hide default radio button label */
 input[type="radio"] + label {
   display: none;
 }
 
-/* Show custom radio button label */
 input[type="radio"] + label::before {
   content: attr(data-label);
-  font-size: 16px; /* Adjust font size as needed */
-  color: #deb887; /* Color for radio button label */
+  font-size: 16px;
+  color: #deb887;
   cursor: pointer;
 }
 
-/* Animation when radio button is clicked */
 input[type="radio"]:checked::before {
   animation: clickAnimation 0.3s ease;
 }
